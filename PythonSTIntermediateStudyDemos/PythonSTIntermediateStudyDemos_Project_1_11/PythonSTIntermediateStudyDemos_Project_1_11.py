@@ -1,0 +1,37 @@
+fileOne = open("newfile.txt", "w", encoding="utf-8")
+fileOne.write("Hello World\n")
+fileOne.close()
+fileOne = open("newfile.txt", "a", encoding="utf-8")
+fileOne.write("Hello World\n")
+fileOne.close()
+fileOne = open("newfile.txt", "a", encoding="utf-8")
+fileOne.write("Hello World\n")
+fileOne.close()
+try:
+    fileFive = open("newfile.txt", "r", encoding="utf-8")
+    for line in fileFive:
+        print(line, end="")
+    print("==========")
+    fileFive = open("newfile.txt", "r", encoding="utf-8")
+    print("Content One")
+    contentOne = fileFive.read()
+    print(contentOne)
+    print("==========")
+    print("Content Two")
+    contentTwo = fileFive.read()
+    # We did not close the file, cursor reach end of the file, so it will write nothing
+    print(contentTwo)
+    print("==========")
+    fileFive = open("newfile.txt", "r", encoding="utf-8")
+    # It will only read one line
+    contentThree = fileFive.readline()
+    print(contentThree)
+    print("==========")
+    fileFive = open("newfile.txt", "r", encoding="utf-8")
+    contentFour = fileFive.readlines()
+    print(contentFour)
+except FileNotFoundError:
+    print("File Reading Error")
+finally:
+    fileFive.close()
+    print("File closed")
