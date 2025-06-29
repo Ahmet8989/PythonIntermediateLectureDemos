@@ -1,0 +1,78 @@
+import numpy as np
+
+numbersOne = np.random.randint(1, 100, 6)
+numbersTwo = np.random.randint(1, 100, 6)
+numbersThree = np.random.randint(1, 100, 6)
+
+result = numbersOne + 10
+result2 = numbersOne - 10
+result3 = numbersOne * 10
+result4 = numbersOne / 10
+result5 = np.sin(numbersOne)
+result6 = np.cos(numbersOne)
+result7 = (numbersOne + numbersTwo + numbersThree)
+result8 = np.sqrt(numbersOne)
+result9 = np.log(numbersOne)
+
+print(numbersOne)
+print(f"Result..: {result}")
+print("==========")
+print(f"Result 2..: {result2}")
+print("==========")
+print(f"Result 3..: {result3}")
+print("==========")
+print(f"Result 4..: {result4}")
+print("==========")
+print(f"Result 5..: {result5}")
+print("==========")
+print(f"Result 6..: {result6}")
+print("==========")
+print(f"Result 7..: {result7}")
+print("==========")
+print(f"Result 8..: {result8}")
+print("==========")
+print(f"Result 9..: {result9}")
+print("==========")
+
+multiDimensionalNumbersOne = numbersOne.reshape(2, 3)
+multiDimensionalNumbersTwo = numbersTwo.reshape(2, 3)
+multiDimensionalNumbersThree = numbersThree.reshape(2, 3)
+
+result10 = np.vstack((multiDimensionalNumbersOne, multiDimensionalNumbersTwo, multiDimensionalNumbersThree))
+result11 = np.hstack((multiDimensionalNumbersOne, multiDimensionalNumbersTwo, multiDimensionalNumbersThree))
+
+result12 = (numbersOne > 50)
+result13 = (numbersTwo > 50)
+result14 = (numbersThree > 50)
+
+result15 = (numbersOne % 2 == 0)
+result16 = (numbersTwo % 2 == 0)
+result17 = (numbersThree % 2 == 0)
+
+print(numbersOne)
+print(numbersTwo)
+print(numbersThree)
+print("==========")
+print(multiDimensionalNumbersOne)
+print(multiDimensionalNumbersTwo)
+print(multiDimensionalNumbersThree)
+print("==========")
+print(f"Result 11..: \n{result11}")
+print(f"Result 10... \n{result10}")
+print("==========")
+print(numbersOne[result15])
+print("==========")
+
+print(numbersOne)
+print(f"Result 12..: {result12}")
+print("==========")
+print(f"Result 13..: {result13}")
+print("==========")
+print(f"Result 14..: {result14}")
+print("==========")
+print(f"Result 15..: {result15}")
+print("==========")
+print(f"Result 16..: {result16}")
+print("==========")
+print(f"Result 17..: {result17}")
+print("==========")
